@@ -1,0 +1,38 @@
+# poetry
+**/build/*
+dist/
+requirements.txt
+dist_package
+db_cache.sqlite
+reports/
+# build
+target/
+tomcat.*/
+# idea
+.idea/
+*.iml
+.DS_Store
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+htmlcov/
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# Nox-generated stuff
+.nox/

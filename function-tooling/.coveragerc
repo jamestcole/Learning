@@ -1,0 +1,6 @@
+[run]
+omit =
+    # top-level lambda_function.py contains static setup and is not tested
+    src/lambda_function.py
+    # todo remove exclude for createvulnerabilityreport once unit tests added
+    src/tooling/createvulnerabilityreport/lambda_function.py

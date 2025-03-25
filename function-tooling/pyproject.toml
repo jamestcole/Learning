@@ -1,0 +1,57 @@
+[[tool.poetry.source]]
+name = "nexus"
+url = "https://nexus.mplatform.co.uk/repository/mob-pypi-repos/simple"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "nexus_library"
+url = "https://nexus.mplatform.co.uk/repository/mob-pypi-releases-local/simple"
+priority = "supplemental"
+
+[tool.poetry]
+name = "function-tooling"
+version = "0.0.0"
+description = "mPlatform only repo for triggering tooling scripts via lambda"
+authors = ["NWG-DigitalChannels"]
+packages = [
+    { include = "**/*.py", from = "src" },
+]
+exclude = ["**/tests/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pylibrary-core = "^2.0.0"
+packaging = "^24.2"
+pylibrary-aws = "^2.1.0"
+dulwich = "0.22.7"
+kubernetes = "^32.0.1"
+eks-token = "^0.3.0"
+boto3 = "^1.36.10"
+pandas = "^2.2.3"
+pandas-stubs = "^2.2.3.241126"
+kubernetes-stubs = "^22.6.0.post1"
+types-boto3 = "^1.37.0"
+requests = "^2.32.3"
+slack-sdk = "^3.34.0"
+python-gitlab = "^5.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.6.1"
+pyfakefs = "^5.7.4"
+
+[tool.poetry.group.formatting.dependencies]
+black = "^23.3"
+flake8 = "^6.1"
+
+[tool.poetry.group.bandit.dependencies]
+bandit = { version = "^1.7.5" }
+
+[tool.poetry.group.typechecking.dependencies]
+mypy = {version = "^1.14.1", extras = ["reports"]}
+
+[tool.poetry.group.dev.dependencies]
+types-requests = "^2.32.0.20241016"
+pytest-cov = "^6.0.0"
+
