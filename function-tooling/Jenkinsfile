@@ -1,0 +1,4 @@
+@Library("digital-jenkins-bootstrap@develop") _
+loadDynamicLibrary(jenkinsProjectName: "mPlatform", bitBucketProjectName: "mplat", libraryName: "mobile-jenkins", repoName: "mobile-jenkins")
+
+mplatformFunctionPipeline moduleName: "tooling"
